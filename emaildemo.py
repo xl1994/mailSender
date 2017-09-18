@@ -1,16 +1,21 @@
 #!/usr/bin/python
 # -*- Coding: UTF-8 -*-
 
+'''
+Before using this demo, you should apply for an client authentication in netease mail service
+and use the authentication code to login rather than your password of the account
+'''
+
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 from email.mime.multipart import MIMEMultipart
 
 def sender_init():
-    # auth code T170918
+    # auth code ******
     mail_host = 'smtp.163.com'
     user = '18613029274@163.com'
-    pwd = 'T170918'
+    pwd = '******'
     try:
         smtpObj = smtplib.SMTP_SSL(mail_host, 465)
         smtpObj.login(user,pwd)
